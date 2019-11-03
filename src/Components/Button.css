@@ -1,0 +1,22 @@
+.item .buttons button {
+    /*height: 40px;*/
+    /*width: 40px;*/
+    background: white;
+    border: none;
+    border-radius: 40px;
+    margin-left: 10px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: initial;
+}
+
+.item .buttons button > *:hover {
+    font-size: medium;
+    color: #2536B4;
+}
+
+.item .buttons button > * {
+    color: #BEC6FF;
+}

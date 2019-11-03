@@ -1,0 +1,103 @@
+#todo-input-field {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    min-width: 500px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.input-wrapper {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-self: stretch;
+    max-width: 700px;
+    width: 100%;
+}
+
+#todo-title {
+    position: relative;
+    left: 0;
+    height: 50px;
+    border-radius: 50px;
+    flex-grow: 1;
+    padding: 15px 20px;
+    color: #8186ad;
+    border-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+    transform: scaleX(1);
+    mask-clip: content-box;
+    font-size: 9pt;
+}
+
+#todo-title:active,
+#todo-title:focus {
+    outline: none;
+    box-shadow: 0 10px 10px -5px #8692ce;
+    color: #2536B4;
+    border-color: #8692ce;
+    background: white;
+    /*padding: 25px 25px;*/
+    font-size: small;
+}
+
+#todo-title:not(:active).filled,
+#todo-title:not(:focus).filled {
+    border-color: #2536B4;
+}
+
+::placeholder,
+::-webkit-input-placeholder,
+:-ms-input-placeholder {
+    color: #ffcf57;
+}
+
+#confirm-todo-title {
+    position: absolute;
+    border-radius: 40px;
+    /*background: #8692ce;*/
+    background: #BEC6FF;
+    color: white;
+    font-weight: bold;
+    right: 5px;
+    height: 40px;
+    width: 40px;
+    border-width: 0px;
+    border-color: white;
+    border-style: solid;
+    /*transition-duration: 150ms;*/
+    cursor: pointer;
+    font-size: large;
+}
+
+#confirm-todo-title.active,
+#confirm-todo-title.filled {
+    background: #8692ce;
+    right: 0px;
+}
+
+#confirm-todo-title.active {
+    height: 50px;
+    width: 50px;
+    border-width: 0px;
+}
+
+#confirm-todo-title.filled {
+    background: #2536B4;
+    box-shadow: 0 10px 10px -5px #8692ce;
+}
+
+#confirm-todo-title.filled:not(.active) {
+    background: #2536B4;
+    height: 50px;
+    width: 50px;
+    border-width: 0;
+}
+
+#confirm-todo-title > * {
+    margin: auto 0;
+}

@@ -1,0 +1,100 @@
+.item {
+    height: 50px;
+    background: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-color: #BEC6FF;
+    border-bottom: 1px solid #BEC6FF;
+    position: relative;
+    z-index: 20;
+    box-shadow: 0 0 100px -20px transparent;
+    transition-duration: 300ms;
+    overflow: hidden;
+}
+
+.item > * {
+    position: relative;
+    z-index: 10;
+}
+
+.item:after {
+    content: " ";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.item.remove:after {
+    background: rgba(204, 204, 204, 0.25);
+}
+
+.item.remove:not(.completed) * {
+    color: rgb(103, 103, 103);
+}
+
+.item.completed:after {
+    background: rgba(0, 128, 0, 0.25);
+    border-color: rgba(0, 128, 0, 0.47);
+}
+
+.item.completed * {
+    color: rgb(0, 128, 0);
+}
+
+.item.completed:after,
+.item.remove:after
+{
+    width: 100%;
+}
+
+.item.completed > .buttons,
+.item.remove > .buttons
+{
+    display: none;
+    right: -100px;
+}
+
+.item.remove {
+    height: 0 !important;
+    border-width: 0;
+}
+
+.item .buttons {
+    position: relative;
+    /*transform: translateX(100px);*/
+    opacity: 0;
+    right: -100px;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in;
+}
+
+.item:hover {
+    z-index: 50;
+    box-shadow: 0 0 200px 0 #9fa6d6;
+    height: 60px;
+}
+
+.item:hover .buttons {
+    opacity: 1;
+    right: 0;
+    /*transform: translateX(0px);*/
+}
+
+.item:last-of-type {
+    border-bottom: none;
+}
+
+.item .information .title {
+
+}
+
+.item .buttons {
+    display: flex;
+    flex-direction: row;
+}

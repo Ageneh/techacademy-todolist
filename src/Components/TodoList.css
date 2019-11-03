@@ -1,0 +1,27 @@
+.list {
+    margin: 20px 0;
+    background: white;
+    min-height: 50px;
+    border-radius: 30px;
+    border: 1px solid #BEC6FF;
+    width: 100%;
+    max-width: 500px;
+    overflow: hidden;
+    box-shadow: 0 10px 35px -20px #586087;
+}
+
+/*
+.list .item > * {
+    color: #6c77b0;
+}
+
+.list:hover .item > * {
+    color: #BEC6FF;
+}
+*/
+
+.no-items > * {
+    text-align: center;
+    color: #BEC6FF;
+}
+
