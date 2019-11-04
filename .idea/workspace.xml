@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb013d89-6429-4c5a-b0d1-53d58c842a86" name="Default Changelist" comment="">
+    <list default="true" id="eb013d89-6429-4c5a-b0d1-53d58c842a86" name="Default Changelist" comment="Build.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,12 +31,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="662" />
-    <option name="y" value="23" />
-    <option name="width" value="1258" />
-    <option name="height" value="1177" />
   </component>
   <component name="ProjectId" id="1T9J4oPbAikjaojJbNe92w9o37Q" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -95,7 +89,7 @@
       <workItem from="1572706165814" duration="15344000" />
       <workItem from="1572782019942" duration="4034000" />
       <workItem from="1572815351592" duration="5802000" />
-      <workItem from="1572866190301" duration="73000" />
+      <workItem from="1572866190301" duration="568000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1572821409335</created>
@@ -104,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572821409336</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Build.">
+      <created>1572866276248</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572866276248</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +134,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial." />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial." />
+    <MESSAGE value="Build." />
+    <option name="LAST_COMMIT_MESSAGE" value="Build." />
   </component>
   <component name="masterDetails">
     <states>
