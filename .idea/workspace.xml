@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb013d89-6429-4c5a-b0d1-53d58c842a86" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/logo.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +50,11 @@
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -89,7 +95,7 @@
       <workItem from="1572706165814" duration="15344000" />
       <workItem from="1572782019942" duration="4034000" />
       <workItem from="1572815351592" duration="5802000" />
-      <workItem from="1572866190301" duration="916000" />
+      <workItem from="1572866190301" duration="1066000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1572821409335</created>
@@ -112,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572866845197</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Manifest">
+      <created>1572867203470</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572867203470</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,7 +156,8 @@
     <MESSAGE value="Initial." />
     <MESSAGE value="Build." />
     <MESSAGE value="Favicon and site description" />
-    <option name="LAST_COMMIT_MESSAGE" value="Favicon and site description" />
+    <MESSAGE value="Manifest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Manifest" />
   </component>
   <component name="masterDetails">
     <states>
