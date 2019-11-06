@@ -13,7 +13,6 @@ export const TodoList = (props) => {
     if (!init) {
         const allCookies = cookies.getAll();
         if("todos" in allCookies) {
-            console.log("todos cookies", cookies.get("todos"));
             props.setAllTodos(cookies.get("todos"))
         } else {
             props.initAllTodos((todos) => cookiesSetter(todos));
@@ -26,7 +25,6 @@ export const TodoList = (props) => {
         );
     }
 
-    console.log("PROPS", props)
     return (
         <div className={"list"}>
             <p>
