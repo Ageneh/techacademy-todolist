@@ -1,9 +1,14 @@
-import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import {Icons} from "./Icons";
-import './InputField.css';
+import React, {useState} from 'react'
+import {Icons} from "./Icons"
+import './InputField.css'
+import {addTodo} from "../store/actions/todos"
+import {connect} from "react-redux";
+import {createTodo} from "../utils/todos";
 
-export const InputField = ({create, callback}) => {
+const pressedEnter = (event) => event.key === 'Enter';
+
+export const InputField = (props) => {
+    const {addTodo} = props;
     const [value, setValue] = useState("");
     const [active, setActive] = useState("");
     const ids = {
@@ -13,8 +18,8 @@ export const InputField = ({create, callback}) => {
     };
 
     const addNewTodo = () => {
-        if(value.trim().length < 1) return;
-        create(value);
+        if (value.trim().length < 1) return;
+        addTodo(createTodo(value));
         setValue("");
         document.getElementById(ids.inputField).focus();
     };
@@ -23,32 +28,34 @@ export const InputField = ({create, callback}) => {
         <div id={ids.inputFieldWrapper}>
             <div className={"input-wrapper"}>
                 <input id={ids.inputField}
-                       className={`${active?"active":""} ${value.trim().length > 0?"filled":""}`}
+                       className={`${active ? "active" : ""} ${value.trim().length > 0 ? "filled" : ""}`}
                        type={"text"}
                        autoFocus={true}
                        placeholder={"New Todo"}
                        value={value}
                        onBlur={() => setActive(false)}
                        onFocus={() => setActive(true)}
-                       onKeyPress={(e) => pressedEnter(e)?addNewTodo():null}
+                       onKeyPress={(e) => pressedEnter(e) ? addNewTodo() : null}
                        onChange={(e) => {
                            setValue(e.target.value);
                        }}/>
                 <button id={ids.confirmButton}
-                        className={`${active?"active":""} ${value.trim().length > 0?"filled":""}`}
+                        className={`${active ? "active" : ""} ${value.trim().length > 0 ? "filled" : ""}`}
                         onClick={() => addNewTodo()}
                         value={"Create"}>
-                    <Icons.Plus />
+                    <Icons.Plus/>
                 </button>
             </div>
         </div>
     );
 };
 
-const pressedEnter = (event) => event.key === 'Enter';
+const mapStateToProps = state => ({
+    ...state
+});
 
-InputField.propTypes = {
-    create: PropTypes.func.isRequired,
-};
+const mapDispatchToProps = dispatch => ({
+    addTodo: (todo) => dispatch(addTodo(todo)),
+});
 
-export default InputField;
+export default connect(mapStateToProps, mapDispatchToProps)(InputField);
