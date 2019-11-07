@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Icons} from "./Icons";
 import './Button.css';
 import {connect} from "react-redux";
-import {attemptAddTodo, attemptCompleteTodo, attemptRemoveTodo} from "../store/thunks/todos";
+import {attemptCompleteTodo, attemptRemoveTodo} from "../store/thunks/todos";
 
 export const Button = (props) => {
     const {id, type} = props;

@@ -9,10 +9,10 @@ export const TodoList = (props) => {
     return (
         <div className={"lists"}>
             <div className={"list open"}>
-                <Items todos={open} completed={true} />
+                <Items todos={open} completed={true}/>
             </div>
             <div className={"list completed"}>
-                <Items todos={completed} completed={false} />
+                <Items todos={completed} completed={false}/>
             </div>
         </div>
     );
@@ -30,12 +30,10 @@ const NoTodos = ({completed = true}) => (
 
 const Items = ({todos, completed = false}) => {
     if (!todos || todos === {} || Object.keys(todos).length < 1) {
-        // return completed ? (<NoCompletedTodos/>) : (<NoTodos/>);
         return <NoTodos completed={completed}/>
     }
 
     return Object.keys(todos).map((key) => {
-        const {title} = todos[key];
         return (
             <TodoItem key={key}
                       {...todos[key]}/>
@@ -58,6 +56,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(mapStateToProps, (dispatch) => ({}))(TodoList);

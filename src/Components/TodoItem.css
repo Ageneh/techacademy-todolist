@@ -58,14 +58,12 @@
 }
 
 .item.completed:after,
-.item.remove:after
-{
+.item.remove:after {
     width: 100%;
 }
 
 .item.completed > .buttons,
-.item.remove > .buttons
-{
+.item.remove > .buttons {
     display: none;
     right: -100px;
 }

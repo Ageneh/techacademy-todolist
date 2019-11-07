@@ -4,11 +4,11 @@ import Button from "./Button";
 import './TodoItem.css';
 
 export const TodoItem = (props) => {
-    const {done, title, description, id, completed, dateFinished} = props;
+    const {done, title, id, completed, dateFinished} = props;
     const {remove, complete} = props;
     console.log(props);
     return (
-        <div data-id={id} className={`item ${done?'done':'open'}`}>
+        <div data-id={id} className={`item ${done ? 'done' : 'open'}`}>
             <div className={"information"}>
                 <p className={"title"}>{title}</p>
                 {

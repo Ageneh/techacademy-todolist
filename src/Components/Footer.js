@@ -11,16 +11,16 @@ export const Footer = (props) => {
             <div className={"wrapper"}>
                 <FooterCounter id={"stat-total"}
                                description={"Total"}
-                               number={total} />
+                               number={total}/>
                 <FooterCounter id={"stat-open"}
                                description={"Open"}
-                               number={open} />
+                               number={open}/>
                 <FooterCounter id={"stat-completed"}
                                description={"Completed"}
-                               number={completed} />
+                               number={completed}/>
                 <FooterCounter id={"stat-deleted"}
                                description={"Deleted"}
-                               number={deleted} />
+                               number={deleted}/>
                 <button onClick={() => {
                     props.resetStats();
                     window.location.reload();

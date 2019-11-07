@@ -1,6 +1,6 @@
 import {addTodo, completeTodo, removeTodo, resetStats, setAllTodos} from "../actions/todos";
 import {setStateInit} from "../actions/app";
-import {createTodo, toLocalStorage} from "../../utils/todos";
+import {createTodo} from "../../utils/todos";
 
 export const attemptAddTodo = (todo) => (dispatch) => {
     return dispatch(addTodo(todo))

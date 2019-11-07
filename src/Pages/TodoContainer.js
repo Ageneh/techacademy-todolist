@@ -4,7 +4,7 @@ import TodoApp from "../Components/TodoApp"
 
 const TodoContainer = (props) => {
     return (
-        <TodoApp />
+        <TodoApp/>
     )
 };
 

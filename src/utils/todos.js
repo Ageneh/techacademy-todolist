@@ -9,6 +9,6 @@ export const createTodo = (title) => ({
 export const toLocalStorage = (key, val) => {
     localStorage.removeItem(key);
     localStorage.setItem(key, JSON.stringify(val));
-}
+};
 
 export const getFromLocalStorage = (key) => JSON.parse(localStorage.getItem(key));
