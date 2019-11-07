@@ -1,30 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb013d89-6429-4c5a-b0d1-53d58c842a86" name="Default Changelist" comment="Adde">
-      <change afterPath="$PROJECT_DIR$/src/Components/Footer.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Footer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/FooterCounter.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/TodoApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Counter.css" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Counter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/FooterCounter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TodoContainer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TodoContainer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/TodoContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/TodoContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/thunks/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/thunks/todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/todos.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/todos.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+    <list default="true" id="eb013d89-6429-4c5a-b0d1-53d58c842a86" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,11 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Components/Footer.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="462">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -152,6 +139,7 @@
         <option value="$PROJECT_DIR$/src/store/reducers/todos.js" />
         <option value="$PROJECT_DIR$/src/Components/Footer.js" />
         <option value="$PROJECT_DIR$/src/Components/Footer.css" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -300,7 +288,7 @@
       <workItem from="1572974317845" duration="2360000" />
       <workItem from="1573035303191" duration="4067000" />
       <workItem from="1573065833434" duration="10368000" />
-      <workItem from="1573144679463" duration="20041000" />
+      <workItem from="1573144679463" duration="20179000" />
     </task>
     <task id="LOCAL-00001" summary="Initial.">
       <created>1572821409335</created>
@@ -344,11 +332,18 @@
       <option name="project" value="LOCAL" />
       <updated>1573077375712</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Finalized redux and persistence with localStorage.">
+      <created>1573169652939</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573169652940</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20711000" />
+    <option name="totallyTimeSpent" value="20849000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="537" y="23" width="1267" height="1177" extended-state="0" />
@@ -368,9 +363,9 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="GraphQL" order="8" />
       <window_info anchor="bottom" id="TypeScript" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3292797" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49919742" visible="true" weight="0.3292797" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.3292797" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5008026" side_tool="true" visible="true" weight="0.3292797" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -430,7 +425,8 @@
     <MESSAGE value="Manifest" />
     <MESSAGE value="Logo.ico" />
     <MESSAGE value="Added redux, thunks and cookies. Not fully done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added redux, thunks and cookies. Not fully done." />
+    <MESSAGE value="Finalized redux and persistence with localStorage." />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalized redux and persistence with localStorage." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,8 +620,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Footer.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="462">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
         </state>
       </provider>
     </entry>
