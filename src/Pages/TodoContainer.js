@@ -1,18 +1,11 @@
 import React from 'react'
-import InputField from "../Components/InputField"
 import './TodoContainer.css'
-import Logo from "../Components/Logo"
-import TodoList from "../Components/TodoList"
-import { withCookies } from 'react-cookie'
+import TodoApp from "../Components/TodoApp"
 
-export const TodoContainer = (props) => {
+const TodoContainer = (props) => {
     return (
-        <div id={"todo-container"}>
-            <Logo/>
-            <InputField/>
-            <TodoList cookies={props.cookies}/>
-        </div>
+        <TodoApp />
     )
 };
 
-export default withCookies(TodoContainer);
+export default TodoContainer;

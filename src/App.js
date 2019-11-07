@@ -1,8 +1,7 @@
 import React from 'react'
 import TodoContainer from "./Pages/TodoContainer"
-import { withCookies } from 'react-cookie'
 
-export const App = () => {
+export const App = (props) => {
     return (
         <>
             <TodoContainer/>
@@ -10,4 +9,4 @@ export const App = () => {
     );
 };
 
-export default withCookies(App);
+export default App

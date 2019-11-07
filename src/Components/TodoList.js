@@ -2,78 +2,62 @@ import React from 'react'
 import TodoItem from "./TodoItem"
 import './TodoList.css'
 import {connect} from "react-redux"
-import {attemptAddAllTodos, attemptSetAllTodos} from "../store/thunks/todos"
 
 export const TodoList = (props) => {
-    const {todos, init, cookies} = props;
-    const cookiesSetter = (todos) => {
-        cookies.set("todos", todos);
-    };
-
-    if (!init) {
-        const allCookies = cookies.getAll();
-        if("todos" in allCookies) {
-            props.setAllTodos(cookies.get("todos"))
-        } else {
-            props.initAllTodos((todos) => cookiesSetter(todos));
-        }
-
-        return (
-            <div className={"list"}>
-                {items(null)}
-            </div>
-        );
-    }
+    const {open, completed} = props;
 
     return (
-        <div className={"list"}>
-            <p>
-                {
-                    JSON.stringify(props.cookies)
-                }
-            </p>
-            {items(todos)}
+        <div className={"lists"}>
+            <div className={"list open"}>
+                <Items todos={open} completed={true} />
+            </div>
+            <div className={"list completed"}>
+                <Items todos={completed} completed={false} />
+            </div>
         </div>
     );
 };
 
-const items = (todos) => {
-    if (!todos || Object.keys(todos).length < 1) {
-        return (
-            <div className={"no-items"}>
-                <p>
-                    <i>
-                        Keine Todos.
-                    </i>
-                </p>
-            </div>
-        )
+const NoTodos = ({completed = true}) => (
+    <div className={"no-items"}>
+        <p>
+            <i>
+                Keine {completed === false ? "geschlossene" : "offene"} Todos.
+            </i>
+        </p>
+    </div>
+);
+
+const Items = ({todos, completed = false}) => {
+    if (!todos || todos === {} || Object.keys(todos).length < 1) {
+        // return completed ? (<NoCompletedTodos/>) : (<NoTodos/>);
+        return <NoTodos completed={completed}/>
     }
 
     return Object.keys(todos).map((key) => {
         const {title} = todos[key];
         return (
             <TodoItem key={key}
-                      done={false}
-                      title={title}
-                      id={key}/>
+                      {...todos[key]}/>
         )
     })
 };
 
-const mapStateToProps = (state, ownProps) => ({
-    ...state.todos,
-    ...state.app,
-    cookies: ownProps.cookies,
-});
+const mapStateToProps = (state) => {
+    const openTodos = {};
+    const completedTodos = {};
+    Object.keys(state.todos.todos).forEach((key) => {
+        const todo = state.todos.todos[key];
+        if (todo.completed === true) completedTodos[key] = todo;
+        else openTodos[key] = todo;
+    });
 
-const mapDispatchToProps = (dispatch) => ({
-    initAllTodos: (cookieSetter) => {
-        dispatch(attemptAddAllTodos(cookieSetter));
-    },
-    setAllTodos: (todos) => {
-        dispatch(attemptSetAllTodos(todos))
+    return {
+        open: openTodos,
+        completed: completedTodos,
     }
-});
+};
+
+const mapDispatchToProps = (dispatch) => ({});
 
 export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

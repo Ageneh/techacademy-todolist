@@ -10,6 +10,7 @@ export const appReducer = (state = initialState, action) => {
     switch (action.type) {
         case SETSTATE_INIT:
             console.log(`SETSTATE_INIT`);
+            if (init === state.init) return state
             return {...state, init: init};
         default:
             return state

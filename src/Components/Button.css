@@ -1,7 +1,5 @@
 .item .buttons button {
-    /*height: 40px;*/
-    /*width: 40px;*/
-    background: white;
+    background: transparent;
     border: none;
     border-radius: 40px;
     margin-left: 10px;
@@ -19,4 +17,12 @@
 
 .item .buttons button > * {
     color: #BEC6FF;
+}
+
+.completed .item .buttons button > * {
+    color: #8186ad;
+}
+
+.completed .item .buttons button > *:hover {
+    color: #32343b;
 }

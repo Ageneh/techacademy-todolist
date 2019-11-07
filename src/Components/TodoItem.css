@@ -16,6 +16,16 @@
     overflow: hidden;
 }
 
+.item .title {
+    font-weight: 600;
+}
+
+.completed .item {
+    color: #32343b;
+    font-style: italic;
+    position: relative;
+}
+
 .item > * {
     position: relative;
     z-index: 10;
@@ -78,6 +88,23 @@
     z-index: 50;
     box-shadow: 0 0 200px 0 #9fa6d6;
     height: 60px;
+}
+
+.completed .item,
+.completed .item:hover {
+    height: 70px;
+}
+
+.completed .item:hover {
+    box-shadow: 0 0 200px 0 #586087;
+}
+
+.completed .item .title {
+    margin: 0 auto;
+}
+
+.completed .item .finished {
+    position: relative;
 }
 
 .item:hover .buttons {

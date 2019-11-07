@@ -2,6 +2,7 @@ export const ADD = "ADD";
 export const REMOVE = "REMOVE";
 export const COMPLETE = "COMPLETE";
 export const SETALL = "SETALL";
+export const RESET = "RESET";
 
 export const TYPES = {
     ADD: "ADD",
@@ -18,6 +19,10 @@ export const addTodo = (todo) => ({
 export const removeTodo = (id) => ({
     type: REMOVE,
     id,
+});
+
+export const resetStats = () => ({
+    type: RESET,
 });
 
 export const completeTodo = (id) => ({

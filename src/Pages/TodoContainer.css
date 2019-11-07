@@ -6,6 +6,7 @@
   align-items: center;
   flex-wrap: nowrap;
   align-content: normal;
+  margin-bottom: 120px;
 }
 
 #todo-container .logo-wrapper img {

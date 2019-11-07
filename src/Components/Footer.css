@@ -1,0 +1,22 @@
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 70px;
+    background: #32343b;
+    z-index: 100;
+    box-shadow: 0 0 50px 0 #9fa6d6;
+}
+
+footer > * {
+    color: #e6e9ff;
+}
+
+footer .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

@@ -1,0 +1,20 @@
+footer .wrapper .stat p {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stat p {
+    /*line-height: 0;*/
+    font-size: medium;
+}
+
+.stat p .number {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.stat p .description {
+    font-size: smaller;
+}

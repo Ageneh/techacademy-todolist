@@ -2,26 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Icons} from "./Icons";
 import './Button.css';
+import {connect} from "react-redux";
+import {attemptAddTodo, attemptCompleteTodo, attemptRemoveTodo} from "../store/thunks/todos";
 
-export const Button = ({id, type, func}) => {
-    let _button;
+export const Button = (props) => {
+    const {id, type} = props;
+    const {removeTodo, completeTodo} = props;
     switch (type) {
         case "delete":
-            _button = deleteButton;
-            break;
+            return deleteButton(id, type, () => removeTodo(id));
         case "done":
         default:
-            _button = completeButton;
+            return completeButton(id, type, () => completeTodo(id));
     }
-
-    return _button(id, type, func);
 };
 
 const deleteButton = (id, type, func) => (
     <button onClick={() => {
         let element = document.body.querySelector(`.item[data-id="${id}"]`);
         element.classList.add("remove");
-        setTimeout(() => func(id), 2000);
+        setTimeout(() => func(id), 500);
     }}
             className={`${type}`}>
         <Icons.Trash/>
@@ -34,7 +34,7 @@ const completeButton = (id, type, func) => (
         element.classList.add("completed");
         setTimeout(() => {
             element.classList.add("remove");
-            setTimeout(() => func(id), 1000)
+            setTimeout(() => func(id), 200)
         }, 3000);
     }}
             className={`${type}`}>
@@ -51,4 +51,11 @@ Button.propTypes = {
     ])
 };
 
-export default Button;
+const mapStateToProps = (state) => ({});
+
+const mapDispatchToProps = (dispatch) => ({
+    removeTodo: (id) => dispatch(attemptRemoveTodo(id)),
+    completeTodo: (id) => dispatch(attemptCompleteTodo(id)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Button);
