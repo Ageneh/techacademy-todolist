@@ -12,3 +12,7 @@ export const toLocalStorage = (key, val) => {
 };
 
 export const getFromLocalStorage = (key) => JSON.parse(localStorage.getItem(key));
+
+export const dateToDateTime = (date) => {
+    return `${date.toLocaleDateString()}, ${date.toLocaleTimeString()}`
+}

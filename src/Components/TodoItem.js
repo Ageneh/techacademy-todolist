@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from "./Button";
 import './TodoItem.css';
+import {dateToDateTime} from "../utils/todos";
 
 export const TodoItem = (props) => {
     const {done, title, id, completed, dateFinished} = props;
@@ -15,7 +16,7 @@ export const TodoItem = (props) => {
                     completed === true && (
                         <small className={"finished"}>
                             {
-                                new Date(dateFinished).toLocaleDateString()
+                                dateToDateTime(new Date(dateFinished))
                             }
                         </small>
                     )
@@ -40,7 +41,6 @@ export const TodoItem = (props) => {
 TodoItem.propTypes = {
     done: PropTypes.bool,
     id: PropTypes.string.isRequired,
-    // title: PropTypes.string.isRequired,
     description: PropTypes.string,
 };
 
